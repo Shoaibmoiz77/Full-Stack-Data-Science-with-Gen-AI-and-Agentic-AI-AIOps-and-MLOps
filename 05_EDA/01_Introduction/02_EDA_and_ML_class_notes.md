@@ -208,8 +208,8 @@ CLEAN DATA
 
 ---
 
-### Notes on gaps in the original material
-Steps 4–7 (Outlier Treatment, Missing Value Treatment, Variable Transformation, Variable Creation) were listed as part of the 7-step EDA framework but not detailed in your raw notes. Worth filling in next as a follow-up:
+### Next Topics to be Covered:
+Steps 4–7 (Outlier Treatment, Missing Value Treatment, Variable Transformation, Variable Creation)
 - **Outlier Treatment:** IQR method, Z-score method, capping/flooring
 - **Missing Value Treatment:** mean/median/mode imputation, KNN imputation, dropping rows/columns
 - **Variable Transformation:** log transform, scaling (normalization/standardization), encoding categorical variables
