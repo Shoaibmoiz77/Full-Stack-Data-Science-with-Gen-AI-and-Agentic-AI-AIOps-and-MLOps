@@ -1,0 +1,35 @@
+CONFIDENCE INTERVAL --
+
+* In previous lesson we learn point estimators but they are not reliable
+* Imagine if you are visit 5% of resturents in london and tell that average price of the meal is 22.50pound
+* you may be close but the true value is not 22.50 somewhare around 20 to 25pounds isn,t it
+* In this way you can create a condidence interval [20, 25], i would say that much more accurcy of the reallity 
+* you are 95% confident that the population parameter lies between 20 & 25 pound
+* remember you are not 100% sure untill you can go the entire population
+* you visit the the 5% of the resturent & CI is -- [20, 25] & 5% chance that the population prameter is outside the range
+
+LEVEL OF CONFIDENCE (CONFIDENCE LEVEL) --
+
+* CL is denoted as (1- alpha) is called CL of the interval & vale of Alpha range b/w 0 to 1
+* If we want to be 95% confident the parameter is inside the interval then 5% would be confidence level 
+* If we have higher confidence level 99% then alpha would be 1%
+* Lets see the formula is [[ FROM THE (point estimate - reliablity factor)*standard error + TO (Realiability factor * standard error) ]]
+========================================================================================================================================
+HOW TO CALCULATE THE CI - 
+
+* A CI is the range within which you expect the population parameter to be & Its estimation is based on the data that we have in sample
+* we can calculate CI in 2 ways - 1> when population variance known 2> population variance unknown
+* lets see the example -- lets say you want to become datascientist and you are more 
+  interested on salary what you are going to get & you aware that population Standard deviation of datascience sal is equeal to $15000
+* you know salary are normally distributed (sample n =30 salary) formula for the CI with known variance is 
+  (population mean will fall between sample mean - Z of alpha/2 times standard error and sampe mean + z of alpha /2 times standard error) 
+* sample mean x bar is the point estimator, standard erro = standard deviation/no. of sample. finally SE = 2739
+* Next check with factor Z of alpha/2, z is standarize varibale has a standard normal distribution, Alpha is when we define at the time of 
+  confidence interval level e.g - confidence level is 95% then alpha - 5%, (99% -- 1%), based on this we can say that common Confidence level - 90%,95% & 99% 
+  and their alpha value are = 10%, 5%, 1% // 0.1, 0.05, 0.01
+* lets say we want to find the values for the 95% of confidence interval. alpha=0.05, we are lookin for z of Alpha/2 (Z 0.025) that means 1-0.025 = 0.0975
+* corresponding Z comes from row & column table headers associated with cell
+* now if you apply everything in the CI formula then you will get final Confidence interval
+* lets repete the exercise with higher interval level of 99% with the example
+* with the 2 example we will find the tradeoff between level of confidence you choose and estimate precission find narrower with 95% confidence & broader with higher confidence
+* 
