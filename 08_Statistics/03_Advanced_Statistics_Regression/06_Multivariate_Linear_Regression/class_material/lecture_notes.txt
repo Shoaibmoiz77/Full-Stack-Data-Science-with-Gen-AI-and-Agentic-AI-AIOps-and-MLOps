@@ -1,0 +1,11 @@
+* so far we learnt simple linear regression but no we are learning multivariate linear regression
+* when you have multiple variable then we use multivariate analysis 
+* house price will depend on many factors such as - size,locatin & year of construction
+* college gpa can not be depends on only SAT score like they other income,gender and so on.
+* if we want good model then we need multivariate regression & the more variable you have the more
+  factor you are considering in a model & sometimes things depnd on more then 20 factors
+* lets see the formula as per given slides
+* what is the main difference is more independent variables not one
+* y hat - predicted / inferred value, b0 - intercept 
+* x1,x2, till xk -- independent variable & b1,b2 till bk are their corresponding coefficient
+* Multivariae is not the best fitting line anymore

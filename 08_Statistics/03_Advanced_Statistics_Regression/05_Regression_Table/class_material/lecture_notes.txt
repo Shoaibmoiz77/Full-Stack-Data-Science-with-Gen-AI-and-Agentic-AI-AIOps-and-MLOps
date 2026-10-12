@@ -1,0 +1,24 @@
+* We can work with Regression analysis using software & software provides couple of tables then insted of graph 
+* Now we will understand this table-- normally we have 3 tables
+* First one is model summary , Second one is ANOVA, Third one is table with coefficient
+* model summary - it contains R square , sample size & standar error
+* we know what is the R-squared -- R-squared measures how much of variability of the data is explained by your model
+* The standard error is a correction of the standard deviation of the sample size
+* not required to much indepth just remember The bigger the sample size, the lower the error, the better the model
+
+* Second table is ANOVA is the Analysis variance and it is a collection of statistical model used for comparing means
+* we alreayd saw about SST,SSE,SSR, in ANOVA table we already found F-statistics, we will descuss in separate lesson
+
+* Third table is coefficient table - this is heart of the regression
+* First row describe the intercept & second row is independent variable & lets go column by column
+* First column is coefficient, we can see the coefficient of intercept 0.4803, B0 = 0.4803
+* looking below we have other coefficient 0.0015 this is our b1=0.0015
+* to define the regression equation these 2 no.s are must required 
+* finally get the equation as yhat = 0.4803+ 0.0015x
+* Next we standard error on each estimate 
+* Last columns are t-statistic and its p-value & if you close attention to this then you might know about hypothesis test 
+  is involved hear, null hypothesis test is H0:B = 0 in other wards coefficient is 0
+* if the coefficient of the intercept is 0, the line crosses they y-axis is at origin
+* we discuss earlier in this course about p-value we are longing for the 0.000 but always researcher to choose the significance level
+* 
+

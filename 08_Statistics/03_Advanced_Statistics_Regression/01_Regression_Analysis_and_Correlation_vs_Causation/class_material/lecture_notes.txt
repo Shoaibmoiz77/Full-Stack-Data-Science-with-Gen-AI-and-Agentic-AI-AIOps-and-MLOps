@@ -1,0 +1,23 @@
+* Regression analysis is most common method for prediction
+* it is used whenever have cause & relationship b/w variables
+* Money spent depends on Money you make and the same way time spend on statistics depends on your motivation
+* we will start from simple linear regression model,how to build a regression, how to interpret a regression,how to compare models
+  and finally multivariate linear regression model
+
+corelation & causation - 
+
+* how to identify corelation b/w 2 variables
+* one way is to plot them a scatter plot try to find a pattern & also by using corelation coefficient
+* we saw the given formula earlier
+* as per the given example we have 3 dataset - 1st - No. of movies vin diesel makes per year
+  2nd dataset is us gdp growth rate & 3rd is uk gdp growth rate
+* lets find the corelation coefficient of the dataset 
+* corelation of vd movies with us gdp growth is 0.43 whats the meaning of this value 
+* corelation of vd modie with uk gdp growht is 0.46 by seeing this you can easily tell that the movie which he make strongly corelate with uk gdp growth
+* finaly uk gdp growth rate and us gdp growth rate 0.01, this doesn't make anysense, so we have to make few consideration
+* can you tell me us & uk country is anything to do staring in the film ofcourse not. the result we got coincident
+* In this case i would say that corelation doesnot imply the causation, its easy to find the corelation but hard to find the causation
+* lake of corelation b/w us & uk gdp growth rate is 0.01  & lets say our sample has taken from the period 2010-2015
+* if you look at these 3 situation then bottom line would be corelation doesnot causation  
+* in regression analysis we will see corelation test to find out whats going on b/w these variable
+

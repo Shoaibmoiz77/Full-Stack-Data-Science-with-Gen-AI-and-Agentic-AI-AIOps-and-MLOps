@@ -1,0 +1,11 @@
+* we learnt that corelation does not imply causation
+* corelation major the degree of relationship b/w 2 variables
+* regrssiion analysis is how one variable affects to the other,if one changes then it causes to other
+* corelation doesnot capture casulaity but the degree of inter relationship b/w 2 variables
+  in vin diesel movie variables move together but not causing each other
+* regression based on causality it showns no degree of connection but cause and effect
+* property of corelation b/w x and y is same as y and x
+* regression b/w both variable is oneway, example income & education but not educat & income
+* corelation is single point 
+* differnt graphical representation for 2 methods, linear regression is known for best fitting line
+  goes to the data point and minimise the distance b/w them

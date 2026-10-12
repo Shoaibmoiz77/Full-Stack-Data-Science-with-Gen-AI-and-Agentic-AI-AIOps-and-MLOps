@@ -1,0 +1,38 @@
+
+* In this class i will explain ANOVA framework. there are 3 terms must define- 
+   1> sum of squares total 2> sum of squares regression 3> sum of squares error
+* sum of squares total denoted as SST-- is the sum squer difference b/w observed dependent variable and its mean
+* SST it is the measures the total variablity of the dataset
+* sum of squares regression SSR -- It is the sum of squre difference b/w predicted value and the mean of the dependent variable
+* SSR explained variability by your line, it descibribe how well the line fit the data
+* sum of squars error (SSE) - Error is the difference b/w observed value & predicted value, we usually want to minimise the error
+* smaller the error better the estimation power of the regression
+* what is the connection amoung these 3 - (SST = SSR + SSE) TOTAL VARIABILITY = EXPLAINED VARIABLILITY + UNEXPLAINED VARIABLITY
+* now we will see how to compare different regression model
+
+==================================================================================================================================
+
+* So far we decompose total variability of the observed data into explained(SSR) & unexplained (SSE)
+* Let me introduce R Square = SSR/SST(variability explained by the regression)/total variablity of the dataset
+* so what is the meaning - it is the relative measue ranging from 0 to 1, R2 at 0 means the regressin line explaine non of the variablity
+  R2 at 1 explaines the entire variability of the data
+* variability ranging from 0.2 to 0.9 so all statistican sugguest that r-square of 0.2 (20%) variability explained by the model 
+* lets think about income once more- it may depend on household income including your parent & spose,education, yr of experience,country you are living in, 
+  language you speak,this made still account for less then 50% variability of income,salary is very complex issue
+* lets check the exam which we saw of sat score and college gpa , we proved that sat score is main key part to decide college gdp
+* our regression had R2 of 0.406 or sat score explained 41% of variability of the college grade for our sample
+* R2 of 41% is neither good nor bad but since it is far away from 90% we may conclude we are missing some thing
+====================================================================================================================================
+* what is ordinary least squares method (ols)--
+* ols stands for min SSE and you can say taht lower erro = better explanatory power so this
+  method aims to find the line which minimise the sum of squared error
+* Lets clarify this things with the graph we have many lines to fit the data, ols determines the one line with smallest error and graphically
+  It is the one closest to all points finally we got the line as this one. but how this formula is applied based on minimum calculus & linear algebra 
+  to determine slope and intercept of the line, by knowing the coefficient hear the regression equation is you can do that in paper also, 
+* but in dataset you have 1000 of value which is impossible to calculus now a days regression analysis is done through software 
+* we have other method to determine the regression line such as - bayesian regression, kernel regression, gaussian process regression
+=======================================================================================================================================================
+
+
+
+ 

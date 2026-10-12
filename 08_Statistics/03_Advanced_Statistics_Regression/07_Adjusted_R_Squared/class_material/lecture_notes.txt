@@ -1,0 +1,10 @@
+* We already saw Rsquard what actually it does, lets see the slides
+* Adjusted R2 bar< R2
+* If you look at the example R squard is 0.406 & adjusted R squard is 0.399
+* now add other variable called random to assign each students
+* we are 100% sure that this table cannot predict any gpa, so this is new model
+* lets see the equatoin
+* lets see the new table after increase the power we will get new r-squre values
+* that why you always exclude useless information
+* lets compare the models simple linear regression & multivariate liner regresino 
+* adjusted r square alway use in multilinear regression

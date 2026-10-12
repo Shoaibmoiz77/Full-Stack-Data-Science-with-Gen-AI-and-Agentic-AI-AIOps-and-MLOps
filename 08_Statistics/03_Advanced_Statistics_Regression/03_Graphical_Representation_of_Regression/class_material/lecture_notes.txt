@@ -1,0 +1,37 @@
+* Lets check out the simple linear equation & everybody aware of the regression line
+* when you plot the datapoint on x & y regression line is best fit line for the datapoints
+* the grey points that are scattered are observed value, intercept b0 is the constant 
+  & the one (b1) is the slope of the regression line
+* the distance b/w observed value and the regression line is the estimator of the error we called as EPSILON
+* Point estimator is called as residual
+* Now if you draw a perpendiculare from the observed point to the regression line intercept b/w that perpendicular
+  line is a point value y is equal to y hat
+* as we discussed earlier given in x, y hat is the predicted by the regression line
+===================================================================================================================
+* Linear regression example -- hear we have dataset with sat grade and collge gpa 
+* total sat score = critical reading + mathmetics + writing
+* gpa = gade point average at graduation from college
+* we have to find the corelation b/w 2 variables
+* Sample corelation(SAT,GPA) is 0.64 & then further test if this corelation is significally test with hypothesis testing
+* we will confirm that 2 variables are corelated
+* No information about under or overachievers. no predictive ability
+* As per the graph of the sat score x-axis - sat score, y-axis = gpa & second one the situation is reversed
+* we have also inculded the regressin line, we have 2 regression. should we use both to make prediction & whats the causal relationship
+* should we use both to make prediction, this is the hardest part to find out which one you will use
+* one provides valuable insights but other provides wrong information but 2 variables are definitely corelated
+* we already tested before how to find the corelation b/w 2 variable we will get as 0.64 we have to find the cause b/w these 2 variable
+* Lets think about the problems - you attend the SAT you get an SAT score, with this score you applied the college, in next 4 yrs you attend college
+  you will receive a many grade then form a gpa, what is this mean this mean fist is sat score then gpa
+* we can say that 2 nd regression is meaningless
+* whenever you find the data that looks regressable, you should not drive straight into 
+  regression analysis,caution and logic should be applied beforehand
+* lets look at other logic part -- what is rationale -- the sat is considered one of the best estimation of intellectual capacity and capability
+* if you get good sat score then you will get good college and good at workplace
+* Almost all colleges across the usa are using sat as a first part for admission
+* you could see the best fitting line b/w points aka the regression line
+* x is independent variable is SAT score & y is dependent variable which is gpa 
+* equeation that we get as (y hat = b0+b1x1) yhat = 0.48 + 0.0015x how can we use this equeation
+* example you got 1700 sat score you insert this value  you get the predicted gpa is 3.03
+* If you attend this specific college and if you are admitted in sat score of 1700 then model predict that you will graduate with gpa is 3.03
+* What if sat score is 2000 then predicted gpa is 3.48
+=========================================================================================================================
