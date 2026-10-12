@@ -1,0 +1,28 @@
+* we learnt how to test hypothesis & how to reject null hypothesis
+* also we checked at various level significance but we couldn't find the significance level whcih 
+  we can no longer do it
+* This is the right time to introduce the p-value
+* p-value is most common way to test hypothesis
+* insted of testing a pre assign level of significance we can find the smallest level of significance 
+  at which we can still reject the null hypothesis, given observed sample statistics 
+* we called the test as datascientist salary, we had standard error as 2739, known populaion standard deviation is 15000
+* Normally distribution of sample size is n = 30, coresponding Z score is Z = -4.67
+* We rejected teh null hypothesis at 0.05  and 0.01 
+* check the z-table of 4.67 same result which will get at -4.67
+* in most z-table you not find this value which 0.07 as it is so large thus we round up the closer value avilabe and we will get as 0.0001
+
+* How do we test  the hypothesis - after choosing the significance level of alpha you compare the p-value to it
+* you reject the null hypothesis if p-value is lower then the significance level therefore we say that such results are extremly significant
+  with any measurments
+* lets see another example if our Z-score is 2.12 you will reject the null hypothesis at 5% but not reject at 1% significnce level
+* lets look at the z-table value that corespond to 2.1 and find that 0.983
+* p-value of one-side test is = 1 - 0.983 = 0.017 so correspond p-value is 0.017
+* p-value of two-side test is =(1-0.983)*2 = 0.034
+* where and how p-value used - most statistical s/w calculat p-value for each test
+* researcher decides significance post -factum
+* p-values are usually found with 3 digits after the dot.000
+* the closer to 0.000 the p-value, the better
+* finally p-value is a universal concept that works with all distribution
+* whatever the test you do p-value is lower then the significance level then y ou rejec tthe null hypothesis
+* if p-value is <0.05 then we will reject the null hypothesis
+* if p-value is>0.01 then we will accept the null hypothesis
