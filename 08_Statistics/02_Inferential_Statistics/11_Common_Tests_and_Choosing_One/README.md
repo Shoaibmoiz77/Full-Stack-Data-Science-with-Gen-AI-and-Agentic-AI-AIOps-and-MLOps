@@ -21,4 +21,4 @@ Recommended: 10_Hypothesis_Testing.
 ## Navigation
 
 Previous: [10_Hypothesis_Testing](../10_Hypothesis_Testing/)  
-Next: Regression and modelling (not covered here)
+Next: [12_Type_I_and_Type_II_Errors](../12_Type_I_and_Type_II_Errors/)
