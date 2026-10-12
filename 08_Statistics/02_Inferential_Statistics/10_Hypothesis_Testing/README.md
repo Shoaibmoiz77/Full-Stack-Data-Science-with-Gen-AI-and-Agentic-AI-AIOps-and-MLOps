@@ -5,14 +5,15 @@ Deciding between two claims with data.
 ## What is inside
 
 - [`01_Hypothesis_Testing_Notes.pdf`](./01_Hypothesis_Testing_Notes.pdf): in-depth notes with worked examples, charts, a Python snippet, a summary and practice questions with answers
+- [`02_Hypothesis_Testing_Class_Slides.pdf`](./02_Hypothesis_Testing_Class_Slides.pdf): the 16 class slides in lecture order, one per page
+- [`class_material/`](./class_material/): the instructor's lecture text (unedited)
 
 ## Topics covered
 
-- Null and alternative hypotheses; one- and two-sided
-- Test statistic, p-value, critical value
-- z-test, t-test and proportion test, step by step
-- Type I and II errors, power, sample size
-- Tests vs confidence intervals; p-value misinterpretations
+- Four steps of data-driven decisions: formulate, choose a test, run it, decide
+- What counts as a testable hypothesis
+- Null (H0) and alternative (H1) hypotheses, with salary examples
+- Two-sided and one-sided tests; status quo vs change
 
 ## Before you start
 

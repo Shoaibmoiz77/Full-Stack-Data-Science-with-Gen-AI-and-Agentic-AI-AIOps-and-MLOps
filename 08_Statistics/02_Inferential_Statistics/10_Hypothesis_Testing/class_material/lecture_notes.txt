@@ -1,0 +1,44 @@
+Hypothesis testing - 
+
+* Based on the previous classes about Inferential statistics & Descriptive statistics
+* you do see lot of information about confidence interval,distribution, z-table & we saw all the exercise
+  related to the all concept
+* confidence intervl provides with the estimates of where parameter are located
+* However when you make a decision you need to take decission yes or no answer
+* Correct approch we can use the test,today we will learn what all are the fundamental testing in statistcis called as HYPOTHESIS testing
+* 4 steps in data-driven decision making -
+	* formulate the hypothesis
+	* once you formulated the hypothesis you have to find the right test
+	* Execute the test
+	* You make a decision based on the result
+====================================================================================================================
+* What is hypothesis - A hypothesis is an idea that can be tested
+* example - if i tell you apples in NY are expensive (this is an idea or statment) but you never tasted until if you compare 
+* if i define expensive as instance where more expensive then 100rs immediate it become hypothesis
+* what exactly can not be tested with hypothesis if i talk about modi govt vs cong govt in this case this is an idea but we cannot do hypothesis testing
+  becuase we dont have any data so no data -- cannot be tested -- so not a hypothesis but you can compare with both govt
+
+Example - 1 
+
+* According to glassdor mean datascientist sal is US $113000 so we want to test the estimate is correct or not
+* there are 2 hypothis is made -- null hypotheis denoted as H0 & Alternative Hypothesis denoted as H1 or H(A)
+* Null hypothis or no hypothesis is the one to be tested , alternative hypotheis is everything else
+* In our example mean datascientist sal would be $113000 while alternative mean datascience sal is not $113000
+* you want to check 113000 is close enough to true mean or not predicted by our sample
+* In case it is then we can say that ACCEPT THE NULL HYPOTHESIS or REJECT THE NULL HYPOTHESIS
+* Concept of null hypothesis is similar to innocent untill proven guilty
+* we assume that mean salary $113 and we try to prove & this is the example of 2 side test
+
+Example - 2
+
+* Your friend told you that data scientist make more then $125000 you down him and you design the test who is right
+* Null hypothesis test would be mean is more then $125 & the alternative would be <=$125 and the alternative would covered everything else
+* thats why mean datascientist salary  is less then or equal to $125000
+* very important to know outcome of the test refer to population parameter rather then sample statistics
+* so finally the result we get for the population & the researcher is trying to REJECT the null hypothesis
+* we can also say that null hypothesis we can say that status quo & alternative hypothese we can say as change or innovation  
+* In our example our friend is the status quo which we are challenging
+
+============================================================================================================================================
+
+
