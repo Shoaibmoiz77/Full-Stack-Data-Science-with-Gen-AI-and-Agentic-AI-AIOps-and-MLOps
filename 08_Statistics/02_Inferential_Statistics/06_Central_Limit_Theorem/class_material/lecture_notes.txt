@@ -1,0 +1,13 @@
+CENTRAL LIMIT THEORAM - 
+
+* CLT is one of the most important concept in statistics
+* lets say given a dataset and distribution doesnot matter, distribution could be normal, uniform, binomial, Random distributoin
+* first thing you have to do is take sample from the dataset . we called as sampling the data
+* if i take 3 sample then i found the mean of 3 sample values & similar way if you take all sample and then calculate the mean of each sample 
+  we will be apply central theoram
+* No matter what ever the distibution in entire dataset mean of sample you took entire dataset it approximate to be normal distribution only
+* lets see with example - we have prepared 960 random numbers, ranging from 1 to 1000 
+* mean of the dataset is 489 & variance is 82,805 and lets take sampel of 30 random samples, consisting of 25numbers so (n=25)
+* when we talk about sample size would be large then sample should be bigger then observation i.e (30>25)
+* biger the sample size better the results you will get
+* lets calculate the sample means plot them now its look like a normal distributed
