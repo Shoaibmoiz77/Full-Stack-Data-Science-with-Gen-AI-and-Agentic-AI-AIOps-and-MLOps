@@ -16,6 +16,8 @@ In-depth notes on inferential statistics, from scratch-level basics to common hy
 | 09 | [`09_Confidence_Intervals`](./09_Confidence_Intervals/) | From a point estimate to a range of plausible values. |
 | 10 | [`10_Hypothesis_Testing`](./10_Hypothesis_Testing/) | Deciding between two claims with data. |
 | 11 | [`11_Common_Tests_and_Choosing_One`](./11_Common_Tests_and_Choosing_One/) | The standard tests and how to pick the right one. |
+| 12 | [`12_Type_I_and_Type_II_Errors`](./12_Type_I_and_Type_II_Errors/) | The two ways a hypothesis test can be wrong, and test power. |
+| 13 | [`13_P_Value`](./13_P_Value/) | The smallest significance level at which the null can be rejected. |
 
 ## Learning path
 
@@ -23,6 +25,7 @@ In-depth notes on inferential statistics, from scratch-level basics to common hy
 Foundations -> Probability -> Distributions -> Normal curve -> Sampling distributions
    -> Central Limit Theorem -> Standard error -> Point estimation
    -> Confidence intervals -> Hypothesis testing -> Common tests
+   -> Type I and II errors -> P-value
 ```
 
 ## Prerequisites
