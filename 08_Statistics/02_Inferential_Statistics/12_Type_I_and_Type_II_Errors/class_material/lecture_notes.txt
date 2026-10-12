@@ -1,0 +1,27 @@
+Type 1 Error vs Type 2 Error --
+
+* In general we have 2 type of error - Type 1 error && Type 2 error
+* Type 1 error -- when you reject a true null hypothesis this is more serious error
+* It is also called as false positive & the probability of making error is alpha the level of significance
+* since you the researcher choose the alpha the responsibility of making error lies on you
+
+* Type 2 error -- when you accept a false null hypothesis & the probability of making error as beta
+* It is also called as false negative, Beta depends on mainly on sample size and population variance
+* if a topic is difficult to test due to hard sampling or high variablity, it is more likely to make this type of error
+
+* If a dataset is hard to test it is not your fault so type 2 considered as smaller problem, 
+* probability of Rejectin a false null hypothesis is 1-beta
+* The researcher goal is always to reject a false null hypothesis, therefore 1- beta is called power of the test
+* Generally researchere increase the power of test by increasing the sample size
+* please check the below common table which are very very important to summerize the type of errors
+* Example - if you are love with one girl but you are not sure she loves you or not
+* There are 2 errors you can make - <1> If she likes you back & you dont invite her out then you are making type 1 error 
+      (H0 - she likes you back (truth - she likes you back) // unfortunately you didnt invite her out because after testing the 
+     situation you wrongly thought that null hypothesis was false, in other words you rejected a true null hypothesis and lost your chance
+	and it is very serious problem	becuase you could have been made for each other but you didnt even try
+*     <2> imageine for other situation 	she does like you but you went to hear and invite her for outing  then in this case 
+ 	H0 - she like you back but truth - she DOESNT likes you back. after testing you accept the null hypothesis and wrongly went and invite 
+        her out & she told you that she has a boyfriend that is much older,smarter then you.so in this case you made Type 2 Error.
+	you invite her out but you accept a false null hypothesis
+* However it is no big deal as you go back to normal life with out her & soon forget this about occward situation
+* Hypothesis testing is like that - you dont want to make any 2 of the error but it happen some times
