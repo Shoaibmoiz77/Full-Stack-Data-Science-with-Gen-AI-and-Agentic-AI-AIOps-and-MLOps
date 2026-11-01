@@ -1,0 +1,7 @@
+Flask>=3.0
+numpy
+pandas
+joblib
+scikit-learn==1.7.2
+matplotlib
+# To open the training notebook you also need Jupyter:  pip install notebook
