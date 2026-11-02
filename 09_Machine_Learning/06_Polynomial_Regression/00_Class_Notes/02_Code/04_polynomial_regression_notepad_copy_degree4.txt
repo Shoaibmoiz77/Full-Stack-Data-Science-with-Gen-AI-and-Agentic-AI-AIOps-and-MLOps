@@ -1,0 +1,202 @@
+# POLYNOMIAL REGRESSION
+# We will learn a slightly more advanced ML model called Polynomial Regression.
+# So far we have built simple linear regression and multiple linear regression models.
+# From now on we will build regressors whose fitted line is no longer a straight line.
+# Polynomial regression comes first, then SVR, then the decision tree regressor
+# and the random forest regressor.
+# If we add polynomial terms (x squared, x cubed ...) to simple linear regression,
+# the result is called polynomial regression.
+# SVR, decision tree and random forest are based on more complex theory.
+
+# ************************************************************************************************************************
+# STEP 1: Importing the libraries
+# ************************************************************************************************************************
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# ************************************************************************************************************************
+# STEP 2: Understanding the problem and importing the dataset
+# ************************************************************************************************************************
+# We are the HR team of a big company and we are about to hire a new employee.
+# After the interview we find that the candidate is a good fit for the job.
+# Now it is time to negotiate the salary we will offer.
+# At the start of the negotiation the candidate says that he has 20+ years of experience
+# and earned 161K a year in his previous company, so he is asking for more than 161K.
+# Someone in the HR team tries to call the previous employer to check this information,
+# but the only thing HR manages to get is the dataset we are going to use.
+# The dataset is a simple table of the salaries of 10 different positions in the previous company.
+# HR runs a simple analysis in Excel and sees that the relationship between
+# position level and salary is non-linear.
+# HR also learns one more useful fact: the candidate has been a Regional Manager for 2 years,
+# and on average it takes 4 years to move from Regional Manager to Partner.
+# So the candidate is halfway between level 6 and level 7, which means level 6.5.
+# Now HR is excited and asks the team to build a regression model to predict
+# the salary for level 6.5.
+# The candidate says his previous salary was 161K, so we will use polynomial regression
+# to check whether that claim is believable (truth or bluff).
+
+dataset = pd.read_csv("emp_sal.csv")   # the file sits in the same folder as this script
+
+# The dataset has 3 columns: Position, Level and Salary.
+# Counting columns from 0: index 0 is Position, index 1 is Level, index 2 is Salary.
+# We do not need the Position column (a categorical column) because it is already
+# encoded as the Level column: each position has exactly one level.
+# So the model needs only 2 columns: the machine will learn the correlation between
+# level and salary, and then predict the salary for level 6.5.
+# Our X matrix is therefore one column (Level) and y is Salary.
+
+X = dataset.iloc[:, 1:2].values
+# X is the matrix of features. We select index 1 (Level).
+# We write 1:2 and not just 1 because the upper bound of a range is excluded in Python,
+# and because X must stay a 2-D matrix (rows x 1 column), not a flat list.
+y = dataset.iloc[:, 2].values
+# y is the dependent variable (Salary), index 2.
+
+# Our main goal: find out whether the candidate is bluffing by building a
+# polynomial regression model.
+
+# ************************************************************************************************************************
+# STEP 3: Splitting into training and test sets and feature scaling (both skipped here)
+# ************************************************************************************************************************
+# In this case we do not split the data into a training set and a test set. Here is why:
+# the dataset has only 10 observations, and with so few observations a split makes no sense:
+# we would not have enough data left to train the model.
+# Also, we want a very accurate prediction because we are predicting the salary of a
+# real new employee, and to get an accurate prediction we need as many observations as
+# possible so that the model learns the relationship in the data as well as it can.
+# Only this time, we allow ourselves to train on the whole dataset.
+#
+# Feature scaling is also not required here, because we are only adding polynomial terms
+# and we will use the same linear regression library for the polynomial model as well.
+# So: no feature scaling and no train/test split.
+
+# ************************************************************************************************************************
+# STEP 4: Building the models
+# ************************************************************************************************************************
+# In this section we build a linear regression model and also a polynomial regression model
+# on the same dataset. We build both so that we can compare their results.
+
+# Fitting Linear Regression to the dataset
+from sklearn.linear_model import LinearRegression
+lin_reg = LinearRegression()
+# lin_reg is the linear model. The polynomial model will be called lin_reg_2,
+# so that we can tell the two apart.
+# We create an object of the LinearRegression class called lin_reg.
+lin_reg.fit(X, y)
+# Fit the lin_reg object to X and y. Now our simple linear regression model is ready.
+
+# ------------------------------------------------------------------------------------------------------------------------
+# Now let us build the polynomial regression model.
+# To do that we import PolynomialFeatures.
+
+# Fitting Polynomial Regression to the dataset
+from sklearn.preprocessing import PolynomialFeatures
+# The preprocessing library is the same one used for feature scaling in data preprocessing.
+# From it we import the PolynomialFeatures class.
+poly_reg = PolynomialFeatures(degree = 4)
+# We create an object called poly_reg and give it the degree.
+# The default degree is 2. In class we started with degree 2 and then raised it to 3 and
+# then to 4 to see the improvement (see STEP 5). Here the final choice, 4, is used.
+# poly_reg transforms the feature X into a new matrix called X_poly: it creates
+# X, X squared, X cubed and so on, up to the power we specify.
+# With one independent variable X, the degree decides how many new columns are created.
+X_poly = poly_reg.fit_transform(X)
+# X_poly is the new matrix that holds the columns created by PolynomialFeatures.
+# poly_reg is the object that fits and transforms X into X_poly.
+
+# Let us explore the variables to see what happened. Double-click X in the variable explorer
+# and you see the original levels. In X_poly there is one column for each power:
+# with degree 2 there are 3 columns (constant 1, X and X squared); with degree 4 there are 5.
+# Remember that in multiple linear regression we had to add the column of 1s (the constant)
+# manually. PolynomialFeatures adds it automatically, by default.
+
+poly_reg.fit(X_poly, y)
+# This line is optional: fit_transform above has already done the work, and the model
+# that actually learns is lin_reg_2 below.
+# (In linear regression we wrote lin_reg.fit(X, y); for the polynomial model the input
+# is X_poly instead of X.)
+
+# ------------------------------------------------------------------------------------------------------------------------
+lin_reg_2 = LinearRegression()
+# We create a second object of the same LinearRegression class.
+lin_reg_2.fit(X_poly, y)
+# Now we fit this linear regression object to X_poly and y.
+# Our polynomial model is now created and we are ready to test the "truth or bluff" question.
+# We now have two regressors: a linear regressor and a polynomial regressor.
+
+# ************************************************************************************************************************
+# STEP 5: Visualising the results
+# ************************************************************************************************************************
+# Now we visualise the results: the 10 level positions are on the x-axis and the 10 related
+# salaries are on the y-axis.
+# First we draw the linear regression model, then the polynomial regression model,
+# and we compare the real observations with the values predicted by each model.
+
+# Visualising the Linear Regression results
+plt.scatter(X, y, color = 'red')
+# Red points are the actual (real) values of X and y.
+plt.plot(X, lin_reg.predict(X), color = 'blue')
+# The blue line is the prediction line: the x-coordinates are the levels and the
+# y-coordinates are the predicted values, lin_reg.predict(X).
+plt.title('Truth or Bluff (Linear Regression)')
+plt.xlabel('Position level')
+plt.ylabel('Salary')
+plt.show()
+
+# Now let us look at the linear regression graph and compare the actual points with the predictions.
+# The linear model gives a straight line: red points are the real observations
+# and the blue line is the predicted values.
+# This is not a good prediction. As we said, a linear model applied to a non-linear dataset
+# does not give accurate predictions.
+# Only a few points are close to the line and some are very far from it.
+# For example, the top point (CEO) has an actual salary of 1,000,000 but the line predicts
+# only about 613,000, which is a large error.
+# That is why we need a better model. Next we build the non-linear (polynomial) model.
+
+# ------------------------------------------------------------------------------------------------------------------------
+# Visualising the Polynomial Regression results
+plt.scatter(X, y, color = 'red')
+plt.plot(X, lin_reg_2.predict(poly_reg.fit_transform(X)), color = 'blue')
+# For the y-coordinates we use lin_reg_2, the model we created for polynomial regression.
+# We write poly_reg.fit_transform(X) here instead of X_poly so that the plotting code
+# is complete on its own.
+plt.title('Truth or Bluff (Polynomial Regression)')
+plt.xlabel('Position level')
+plt.ylabel('Salary')
+plt.show()
+
+# What do we see?
+# Degree 2: there is no straight line any more; we get a curve. This shows how to tell a linear
+# model from a non-linear one: a linear model is a straight line, a non-linear fit is a curve.
+# Take the highest point, the CEO, whose actual salary is 1,000,000. The degree-2 model predicts
+# about 847,000. That is better than the linear model, but still not accurate,
+# so we increase the degree from 2 to 3.
+#
+# Degree 3: to try it, change degree = 2 to degree = 3 in the PolynomialFeatures line and run again.
+# The blue curve is much closer to the actual points than the linear line was, and the
+# CEO prediction (about 950,000) is almost equal to the actual salary.
+# We can ask whether the model can be improved a little more.
+#
+# Degree 4: change the degree to 4 and run again. Now the blue curve fits the actual points
+# almost exactly (the CEO prediction is about 989,000).
+
+# ************************************************************************************************************************
+# STEP 6: Predicting the salary of level 6.5 (is the new employee telling the truth?)
+# ************************************************************************************************************************
+# The final step is to decide whether the new employee is telling the truth or bluffing.
+# His claimed previous salary is 161K. We compare this value with the model's prediction
+# for level 6.5.
+
+# Predicting a new result with Linear Regression
+lin_reg.predict([[6.5]])
+# This shows the predicted salary for level 6.5 from the linear regression model.
+# It is about 330K (the same value you read off the linear plot at level 6.5).
+# This is definitely not the best prediction.
+
+# Predicting a new result with Polynomial Regression
+lin_reg_2.predict(poly_reg.fit_transform([[6.5]]))
+# This shows the predicted salary for level 6.5 from the polynomial regression model.
+# With degree 4 it is about 159K, which is almost equal to the 161K he claims.
+# So, according to the model, the employee is telling the truth, and we solved this
+# problem with the polynomial regression model.
